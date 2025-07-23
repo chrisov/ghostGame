@@ -1,7 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://clwws4l3nkhqd"]
+[gd_scene load_steps=3 format=3 uid="uid://clwws4l3nkhqd"]
 
 [ext_resource type="PackedScene" uid="uid://dqoy101y835ho" path="res://Player/player.tscn" id="1_rupst"]
+[ext_resource type="PackedScene" uid="uid://dgp2ilyc6ctsn" path="res://TileMaps/ground.tscn" id="2_wt17y"]
 
 [node name="Playground" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_rupst")]
+position = Vector2(235, 115)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Ground" parent="." instance=ExtResource("2_wt17y")]

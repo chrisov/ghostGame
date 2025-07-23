@@ -123,7 +123,8 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_00tjw"]
 resource_name = "walk_down"
-length = 0.6
+length = 0.82
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -131,10 +132,10 @@ tracks/0/path = NodePath("Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("3_btcbx"), ExtResource("3_btcbx"), ExtResource("3_btcbx"), ExtResource("3_btcbx")]
+"values": [ExtResource("3_btcbx"), ExtResource("3_btcbx"), ExtResource("3_btcbx"), ExtResource("3_btcbx"), ExtResource("3_btcbx")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -143,16 +144,16 @@ tracks/1/path = NodePath("Sprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [12, 13, 14, 15]
+"values": [12, 13, 14, 15, 12]
 }
 
 [sub_resource type="Animation" id="Animation_vtle1"]
 resource_name = "walk_left"
-length = 0.6
-loop_mode = 2
+length = 0.82
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -160,10 +161,10 @@ tracks/0/path = NodePath("Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("3_btcbx"), ExtResource("3_btcbx"), ExtResource("3_btcbx"), ExtResource("3_btcbx")]
+"values": [ExtResource("3_btcbx"), ExtResource("3_btcbx"), ExtResource("3_btcbx"), ExtResource("3_btcbx"), ExtResource("3_btcbx")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -172,16 +173,16 @@ tracks/1/path = NodePath("Sprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [0, 1, 2, 3, 0]
 }
 
 [sub_resource type="Animation" id="Animation_od3ui"]
 resource_name = "walk_up"
-length = 0.6
-loop_mode = 2
+length = 0.82
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -189,10 +190,10 @@ tracks/0/path = NodePath("Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("3_btcbx"), ExtResource("3_btcbx"), ExtResource("3_btcbx"), ExtResource("3_btcbx")]
+"values": [ExtResource("3_btcbx"), ExtResource("3_btcbx"), ExtResource("3_btcbx"), ExtResource("3_btcbx"), ExtResource("3_btcbx")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -201,10 +202,10 @@ tracks/1/path = NodePath("Sprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [8, 9, 10, 11]
+"values": [8, 9, 10, 11, 8]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fhl08"]
@@ -219,7 +220,6 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(227, 119)
 script = ExtResource("1_4ntmi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
