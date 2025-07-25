@@ -14,3 +14,12 @@ position = Vector2(356, 1285)
 [node name="Ground" parent="." instance=ExtResource("2_wt17y")]
 
 [node name="main" parent="." instance=ExtResource("3_m8u5f")]
+
+[node name="Minimap" type="SubViewport" parent="."]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(256, 256)
+render_target_update_mode = 4
+
+[node name="Camera2D" type="Camera2D" parent="Minimap"]
+zoom = Vector2(4, 4)
