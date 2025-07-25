@@ -7,7 +7,7 @@
 [node name="Playground" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_rupst")]
-position = Vector2(612, 769)
+position = Vector2(356, 1285)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
