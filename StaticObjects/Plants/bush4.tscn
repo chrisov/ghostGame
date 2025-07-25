@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4gt1nnahgu0i"]
+
+[ext_resource type="Texture2D" uid="uid://drap4s8ep7hk8" path="res://TileMaps/Sprites/TX Plant.png" id="1_2s15c"]
+[ext_resource type="Script" uid="uid://rfa3hpg8qjb3" path="res://StaticObjects/sortY.gd" id="2_jfoiu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilf2u"]
+atlas = ExtResource("1_2s15c")
+region = Rect2(209.431, 180.558, 57.1248, 52.1574)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a2wdr"]
+height = 40.0
+
+[node name="Bush1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_ilf2u")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2_jfoiu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_a2wdr")

@@ -1,25 +1,207 @@
-[gd_scene load_steps=4 format=3 uid="uid://clwws4l3nkhqd"]
+[gd_scene load_steps=16 format=3 uid="uid://clwws4l3nkhqd"]
 
 [ext_resource type="PackedScene" uid="uid://dqoy101y835ho" path="res://Player/player.tscn" id="1_rupst"]
-[ext_resource type="PackedScene" uid="uid://dgp2ilyc6ctsn" path="res://TileMaps/ground.tscn" id="2_wt17y"]
+[ext_resource type="PackedScene" uid="uid://b26fhayg4vy57" path="res://StaticObjects/Plants/Tree1.tscn" id="3_is3ju"]
 [ext_resource type="PackedScene" uid="uid://bgd3poloigvs5" path="res://TileMaps/main.tscn" id="3_m8u5f"]
+[ext_resource type="PackedScene" uid="uid://cm43rtriut7yr" path="res://StaticObjects/Decoration/CrossGrave.tscn" id="4_is3ju"]
+[ext_resource type="PackedScene" uid="uid://e6c1fnpdqvdh" path="res://StaticObjects/Decoration/RIP.tscn" id="5_o00ia"]
+[ext_resource type="PackedScene" uid="uid://dh7jq3xklrd2a" path="res://StaticObjects/Decoration/Tombstone.tscn" id="5_ynsuh"]
+[ext_resource type="PackedScene" uid="uid://y6n6io0al0qb" path="res://StaticObjects/Decoration/Statue.tscn" id="6_4bqqs"]
+[ext_resource type="PackedScene" uid="uid://b4mthfx1dvlsn" path="res://StaticObjects/Plants/Tree2.tscn" id="7_v7dth"]
+[ext_resource type="PackedScene" uid="uid://1fd832vhdwo1" path="res://StaticObjects/Plants/Tree3.tscn" id="8_pi42a"]
+[ext_resource type="PackedScene" uid="uid://bka1jb5nmxv4p" path="res://StaticObjects/Plants/bush1.tscn" id="9_h1jm5"]
+[ext_resource type="PackedScene" uid="uid://c21ivajtqv312" path="res://StaticObjects/Plants/bush3.tscn" id="9_jgc46"]
+[ext_resource type="PackedScene" uid="uid://b4gt1nnahgu0i" path="res://StaticObjects/Plants/bush4.tscn" id="10_dk0co"]
+[ext_resource type="PackedScene" uid="uid://t3xmmiwppccx" path="res://StaticObjects/Plants/bush2.tscn" id="10_pio1y"]
+[ext_resource type="PackedScene" uid="uid://d0uhg24xfydql" path="res://StaticObjects/Plants/bush5.tscn" id="11_pactg"]
+[ext_resource type="PackedScene" uid="uid://bv7a535ib1jwy" path="res://StaticObjects/Plants/bush6.tscn" id="12_ycdrs"]
 
 [node name="Playground" type="Node2D"]
+y_sort_enabled = true
+position = Vector2(-40, 56)
 
 [node name="Player" parent="." instance=ExtResource("1_rupst")]
-position = Vector2(356, 1285)
+position = Vector2(336, 1304)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
-[node name="Ground" parent="." instance=ExtResource("2_wt17y")]
-
 [node name="main" parent="." instance=ExtResource("3_m8u5f")]
 
-[node name="Minimap" type="SubViewport" parent="."]
-disable_3d = true
-transparent_bg = true
-size = Vector2i(256, 256)
-render_target_update_mode = 4
+[node name="Graves_SE" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="Camera2D" type="Camera2D" parent="Minimap"]
-zoom = Vector2(4, 4)
+[node name="Grave2" parent="Graves_SE" instance=ExtResource("4_is3ju")]
+position = Vector2(1015, 782)
+
+[node name="Grave3" parent="Graves_SE" instance=ExtResource("4_is3ju")]
+position = Vector2(882, 782)
+
+[node name="Grave5" parent="Graves_SE" instance=ExtResource("4_is3ju")]
+position = Vector2(1061, 782)
+
+[node name="Grave6" parent="Graves_SE" instance=ExtResource("4_is3ju")]
+position = Vector2(1108, 782)
+
+[node name="Grave8" parent="Graves_SE" instance=ExtResource("4_is3ju")]
+position = Vector2(1015, 826)
+
+[node name="Grave9" parent="Graves_SE" instance=ExtResource("4_is3ju")]
+position = Vector2(882, 826)
+
+[node name="Grave12" parent="Graves_SE" instance=ExtResource("4_is3ju")]
+position = Vector2(1108, 826)
+
+[node name="Grave13" parent="Graves_SE" instance=ExtResource("4_is3ju")]
+position = Vector2(970, 872)
+
+[node name="Grave14" parent="Graves_SE" instance=ExtResource("4_is3ju")]
+position = Vector2(1015, 872)
+
+[node name="Grave15" parent="Graves_SE" instance=ExtResource("4_is3ju")]
+position = Vector2(882, 872)
+
+[node name="Grave17" parent="Graves_SE" instance=ExtResource("4_is3ju")]
+position = Vector2(1061, 872)
+
+[node name="Grave18" parent="Graves_SE" instance=ExtResource("4_is3ju")]
+position = Vector2(1108, 872)
+
+[node name="Grave19" parent="Graves_SE" instance=ExtResource("4_is3ju")]
+position = Vector2(1159, 782)
+
+[node name="Grave20" parent="Graves_SE" instance=ExtResource("4_is3ju")]
+position = Vector2(1205, 782)
+
+[node name="Grave22" parent="Graves_SE" instance=ExtResource("4_is3ju")]
+position = Vector2(1205, 826)
+
+[node name="RIP" parent="Graves_SE" instance=ExtResource("5_o00ia")]
+position = Vector2(970, 781)
+
+[node name="Grave23" parent="Graves_SE" instance=ExtResource("4_is3ju")]
+position = Vector2(1159, 872)
+
+[node name="RIP2" parent="Graves_SE" instance=ExtResource("5_o00ia")]
+position = Vector2(926, 825)
+
+[node name="RIP3" parent="Graves_SE" instance=ExtResource("5_o00ia")]
+position = Vector2(926, 870)
+
+[node name="RIP4" parent="Graves_SE" instance=ExtResource("5_o00ia")]
+position = Vector2(1061, 825)
+
+[node name="RIP5" parent="Graves_SE" instance=ExtResource("5_o00ia")]
+position = Vector2(1159, 825)
+
+[node name="RIP6" parent="Graves_SE" instance=ExtResource("5_o00ia")]
+position = Vector2(1205, 871)
+
+[node name="Tombstone" parent="Graves_SE" instance=ExtResource("5_ynsuh")]
+position = Vector2(971, 824)
+
+[node name="Tombstone2" parent="Graves_SE" instance=ExtResource("5_ynsuh")]
+position = Vector2(926, 781)
+
+[node name="Plants" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Plant2" parent="Plants" instance=ExtResource("3_is3ju")]
+position = Vector2(264, 1128)
+
+[node name="Plant" parent="Plants" instance=ExtResource("3_is3ju")]
+position = Vector2(800, 576)
+
+[node name="Plant3" parent="Plants" instance=ExtResource("7_v7dth")]
+position = Vector2(400, 1128)
+
+[node name="Tree3" parent="Plants" instance=ExtResource("8_pi42a")]
+position = Vector2(432, 1248)
+
+[node name="Bush4" parent="Plants" instance=ExtResource("9_jgc46")]
+position = Vector2(278, 1311)
+
+[node name="Bush5" parent="Plants" instance=ExtResource("10_dk0co")]
+position = Vector2(269, 1281)
+
+[node name="Bush6" parent="Plants" instance=ExtResource("11_pactg")]
+position = Vector2(273, 1337)
+
+[node name="Bush7" parent="Plants" instance=ExtResource("12_ycdrs")]
+position = Vector2(276, 1218)
+
+[node name="Bush1" parent="Plants" instance=ExtResource("9_h1jm5")]
+position = Vector2(281, 1241)
+
+[node name="Bush3" parent="Plants" instance=ExtResource("10_pio1y")]
+position = Vector2(287, 1256)
+
+[node name="Bush2" parent="Plants" instance=ExtResource("9_h1jm5")]
+position = Vector2(296, 1271)
+
+[node name="Bush8" parent="Plants" instance=ExtResource("9_h1jm5")]
+position = Vector2(268, 1369)
+
+[node name="Tree4" parent="Plants" instance=ExtResource("8_pi42a")]
+position = Vector2(271, 1221)
+
+[node name="Bush9" parent="Plants" instance=ExtResource("10_pio1y")]
+position = Vector2(296, 1298)
+
+[node name="Bush10" parent="Plants" instance=ExtResource("12_ycdrs")]
+position = Vector2(280, 1361)
+
+[node name="Bush11" parent="Plants" instance=ExtResource("12_ycdrs")]
+position = Vector2(275, 1388)
+
+[node name="Bush12" parent="Plants" instance=ExtResource("9_h1jm5")]
+position = Vector2(288, 1381)
+
+[node name="Bush13" parent="Plants" instance=ExtResource("9_jgc46")]
+position = Vector2(426, 1324)
+
+[node name="Bush14" parent="Plants" instance=ExtResource("10_dk0co")]
+position = Vector2(434, 1285)
+
+[node name="Bush15" parent="Plants" instance=ExtResource("11_pactg")]
+position = Vector2(434, 1338)
+
+[node name="Bush16" parent="Plants" instance=ExtResource("9_h1jm5")]
+position = Vector2(417, 1258)
+
+[node name="Bush17" parent="Plants" instance=ExtResource("10_pio1y")]
+position = Vector2(441, 1245)
+
+[node name="Bush18" parent="Plants" instance=ExtResource("9_h1jm5")]
+position = Vector2(426, 1267)
+
+[node name="Bush19" parent="Plants" instance=ExtResource("9_h1jm5")]
+position = Vector2(429, 1370)
+
+[node name="Bush20" parent="Plants" instance=ExtResource("10_pio1y")]
+position = Vector2(423, 1305)
+
+[node name="Bush21" parent="Plants" instance=ExtResource("12_ycdrs")]
+position = Vector2(441, 1362)
+
+[node name="Bush22" parent="Plants" instance=ExtResource("12_ycdrs")]
+position = Vector2(436, 1389)
+
+[node name="Bush23" parent="Plants" instance=ExtResource("9_h1jm5")]
+position = Vector2(449, 1382)
+
+[node name="Bush24" parent="Plants" instance=ExtResource("9_h1jm5")]
+position = Vector2(265, 1247)
+
+[node name="Bush25" parent="Plants" instance=ExtResource("10_pio1y")]
+position = Vector2(432, 1225)
+rotation = 1.309
+
+[node name="Statues" type="Node2D" parent="."]
+y_sort_enabled = true
+position = Vector2(392, 304)
+
+[node name="Statue" parent="Statues" instance=ExtResource("6_4bqqs")]
+position = Vector2(40, 720)
+
+[node name="Statue2" parent="Statues" instance=ExtResource("6_4bqqs")]
+position = Vector2(312, 176)

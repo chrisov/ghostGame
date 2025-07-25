@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://b26fhayg4vy57"]
+
+[ext_resource type="Texture2D" uid="uid://drap4s8ep7hk8" path="res://TileMaps/Sprites/TX Plant.png" id="1_ir5lj"]
+[ext_resource type="Script" uid="uid://rfa3hpg8qjb3" path="res://StaticObjects/sortY.gd" id="1_qoudq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ir5lj"]
+radius = 6.47765
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s64lw"]
+atlas = ExtResource("1_ir5lj")
+region = Rect2(10, 0, 420, 170)
+
+[node name="Plant" type="Node2D"]
+visibility_layer = 2
+position = Vector2(0, -63)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 62)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_qoudq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+light_mask = 0
+position = Vector2(-1, -44)
+shape = SubResource("CircleShape2D_ir5lj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+process_physics_priority = 1
+texture = SubResource("AtlasTexture_s64lw")
+centered = false
+offset = Vector2(-70, -130)
+hframes = 3

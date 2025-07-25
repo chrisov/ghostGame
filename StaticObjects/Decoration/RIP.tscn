@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://e6c1fnpdqvdh"]
+
+[ext_resource type="Texture2D" uid="uid://dypnj6p2xwrm6" path="res://TileMaps/Sprites/TX Props.png" id="1_ydgdp"]
+[ext_resource type="Script" uid="uid://rfa3hpg8qjb3" path="res://StaticObjects/sortY.gd" id="2_2vgnc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4jr8"]
+atlas = ExtResource("1_ydgdp")
+region = Rect2(223, 238, 34, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydgdp"]
+size = Vector2(28, 16)
+
+[node name="Tombstone" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_k4jr8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+z_index = 1
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2_2vgnc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+z_index = 1
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_ydgdp")

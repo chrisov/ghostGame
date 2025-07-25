@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dqoy101y835ho"]
 
-[ext_resource type="Script" uid="uid://ddbxdlhldnhlh" path="res://Player/Scripts/script.gd" id="1_4ntmi"]
+[ext_resource type="Script" uid="uid://ddbxdlhldnhlh" path="res://Player/Scripts/player.gd" id="1_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://fnkfu0s2gkqf" path="res://Player/Sprites/Character_Idle.png" id="2_btcbx"]
 [ext_resource type="Texture2D" uid="uid://bdcig7dvo8utx" path="res://Player/Sprites/Character_Walk.png" id="3_btcbx"]
 
@@ -152,7 +152,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_vtle1"]
 resource_name = "walk_left"
-length = 0.82
+length = 0.84
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -220,6 +220,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
 collision_mask = 2
 script = ExtResource("1_4ntmi")
 

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm43rtriut7yr"]
+
+[ext_resource type="Texture2D" uid="uid://dypnj6p2xwrm6" path="res://TileMaps/Sprites/TX Props.png" id="1_li26j"]
+[ext_resource type="Script" uid="uid://rfa3hpg8qjb3" path="res://StaticObjects/sortY.gd" id="2_13wfl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcs1d"]
+atlas = ExtResource("1_li26j")
+region = Rect2(223, 297.5, 34, 51)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqmt3"]
+size = Vector2(18, 17)
+
+[node name="Grave" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_kcs1d")
+centered = false
+offset = Vector2(-17, -28)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2_13wfl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_tqmt3")
