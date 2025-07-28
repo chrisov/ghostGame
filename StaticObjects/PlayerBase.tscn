@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxyyjp4dijnho"]
+
+[ext_resource type="Texture2D" uid="uid://dypnj6p2xwrm6" path="res://TileMaps/Sprites/TX Props.png" id="1_4mwu1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rbsy"]
+atlas = ExtResource("1_4mwu1")
+region = Rect2(349, 264.5, 103, 83)
+
+[node name="PlayerBase" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_0rbsy")
+centered = false
+offset = Vector2(-51, 5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]

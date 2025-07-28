@@ -9,7 +9,6 @@ var state : String = "idle"
 @onready var sprite : Sprite2D = $Sprite
 
 func		_process(delta):
-
 	direction.x = Input.get_action_strength("goRight") - Input.get_action_strength("goLeft")
 	direction.y = Input.get_action_strength("goDown") - Input.get_action_strength(("goUp"))
 	velocity = direction * move_speed

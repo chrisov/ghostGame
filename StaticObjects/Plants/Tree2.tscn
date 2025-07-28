@@ -17,6 +17,7 @@ texture = SubResource("AtlasTexture_nn81p")
 offset = Vector2(2, -40)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+show_behind_parent = true
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("2_nn81p")

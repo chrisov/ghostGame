@@ -10,18 +10,17 @@ region = Rect2(223, 238, 34, 45)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ydgdp"]
 size = Vector2(28, 16)
 
-[node name="Tombstone" type="Node2D"]
+[node name="RIP" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_k4jr8")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-z_index = 1
+show_behind_parent = true
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("2_2vgnc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-z_index = 1
 position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_ydgdp")
