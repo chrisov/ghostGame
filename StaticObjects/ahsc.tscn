@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://cquipre3e14op"]
+
+[ext_resource type="Texture2D" uid="uid://big1hvpc8lxf" path="res://TileMaps/Sprites/TX Struct.png" id="1_x3f7i"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ykk1v"]
+texture = ExtResource("1_x3f7i")
+texture_region_size = Vector2i(32, 32)
+1:12/0 = 0
+1:10/0 = 0
+1:11/0 = 0
+2:12/0 = 0
+2:13/0 = 0
+2:14/0 = 0
+2:15/0 = 0
+1:15/0 = 0
+1:14/0 = 0
+1:13/0 = 0
+2:11/0 = 0
+2:10/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+2:4/0 = 0
+2:3/0 = 0
+2:2/0 = 0
+1:2/0 = 0
+1:3/0 = 0
+1:5/0 = 0
+1:4/0 = 0
+1:6/0 = 0
+2:5/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_l1bps"]
+sources/1 = SubResource("TileSetAtlasSource_ykk1v")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvv7y"]
+size = Vector2(117, 140)
+
+[node name="Ahsc" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_l1bps")
+format = 2
+layer_0/tile_data = PackedInt32Array(327684, 65537, 1, 393220, 65537, 2, 458756, 65537, 3, 327685, 131073, 1, 393221, 131073, 2, 458757, 131073, 3, 262151, 65537, 5, 327687, 65537, 6, 393223, 65537, 7, 262152, 131073, 5, 327688, 131073, 6, 393224, 131073, 7, 524296, 65537, 5, 589832, 65537, 6, 655368, 65537, 7, 524297, 131073, 5, 589833, 131073, 6, 655369, 131073, 7, 589829, 65537, 5, 655365, 65537, 6, 720901, 65537, 7, 589830, 131073, 5, 655366, 131073, 6, 720902, 131073, 7)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMap"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D"]
+position = Vector2(114.5, 132)
+shape = SubResource("RectangleShape2D_uvv7y")

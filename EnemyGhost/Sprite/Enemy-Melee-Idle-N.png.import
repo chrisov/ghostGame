@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdi04oc3leivr"
-path="res://.godot/imported/Enemy_Ranged_v01.png-02041dcd0a28745c8c62174ffec9675c.ctex"
+uid="uid://c0xgwgf02x1do"
+path="res://.godot/imported/Enemy-Melee-Idle-N.png-a7d470c60b0594098e58878ddd42ae76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EnemyGhost/Enemy_Ranged_v01.png"
-dest_files=["res://.godot/imported/Enemy_Ranged_v01.png-02041dcd0a28745c8c62174ffec9675c.ctex"]
+source_file="res://EnemyGhost/Sprite/Enemy-Melee-Idle-N.png"
+dest_files=["res://.godot/imported/Enemy-Melee-Idle-N.png-a7d470c60b0594098e58878ddd42ae76.ctex"]
 
 [params]
 
