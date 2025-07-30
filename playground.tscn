@@ -23,11 +23,10 @@ y_sort_enabled = true
 position = Vector2(0, 2)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0.277232, 0.650122, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_rupst")]
-position = Vector2(357, 1326)
+position = Vector2(357, 1322)
 
 [node name="main" parent="." instance=ExtResource("3_m8u5f")]
 y_sort_enabled = false

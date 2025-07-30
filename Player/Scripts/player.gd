@@ -3,11 +3,11 @@ class_name Player extends CharacterBody2D
 var direction : Vector2 = Vector2.ZERO
 var cardinal_direction : Vector2 = Vector2.ZERO
 
-@onready var animation : AnimationPlayer = $Animation
-@onready var sprite : Sprite2D = $Sprite
+@onready var animation : AnimatedSprite2D = $AnimatedSprite2D
 @onready var state_machine: PlayerStateMachine = $StateMachine
 
 func		_ready():
+	cardinal_direction = Vector2.DOWN
 	state_machine.Initialize(self)
 	pass
 
@@ -31,7 +31,6 @@ func		_setDirection() -> bool:
 	if (new_dir == cardinal_direction):
 		return false
 	cardinal_direction = new_dir
-	sprite.scale.x = 1 if cardinal_direction == Vector2.LEFT else -1
 	return true
 
 func		_updateAnimation(_state : String):
@@ -43,4 +42,6 @@ func		_getDirection() -> String:
 		return ("down")
 	elif (cardinal_direction == Vector2.UP):
 		return ("up")
-	return ("left")
+	elif (cardinal_direction == Vector2.LEFT):
+		return ("left")
+	return ("right")
