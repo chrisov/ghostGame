@@ -31,6 +31,7 @@ func		_setDirection() -> bool:
 	if (new_dir == cardinal_direction):
 		return false
 	cardinal_direction = new_dir
+	animation.scale.x = 1 if cardinal_direction == Vector2.LEFT else -1
 	return true
 
 func		_updateAnimation(_state : String):
@@ -42,6 +43,4 @@ func		_getDirection() -> String:
 		return ("down")
 	elif (cardinal_direction == Vector2.UP):
 		return ("up")
-	elif (cardinal_direction == Vector2.LEFT):
-		return ("left")
-	return ("right")
+	return ("left")

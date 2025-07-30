@@ -23,6 +23,7 @@ y_sort_enabled = true
 position = Vector2(0, 2)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0.277232, 0.650122, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_rupst")]
